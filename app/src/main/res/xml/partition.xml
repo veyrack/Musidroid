@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE partition SYSTEM
+    "/users/nfs/Etu6/3520096/AndroidStudioProjects/MyApplication/app/src/main/res/partition.dtd">
+
+<partition tempo="150">
+    <instrument_part name="Instrumentname.ACOUSTIC_GRAND_PIANO" octave="4">
+        <note name="NoteName.DO" instant="1" duration="1">
+        </note>
+        <note name="NoteName.RE" instant="2" duration="1">
+        </note>
+    </instrument_part>
+    <instrument_part name="Instrumentname.OCARINA" octave="4">
+        <note name="NoteName.DO" instant="3" duration="1">
+        </note>
+        <note name="NoteName.RE" instant="4" duration="1">
+        </note>
+    </instrument_part>
+</partition>

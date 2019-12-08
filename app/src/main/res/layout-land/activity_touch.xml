@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start"
+    android:weightSum="1"
+    android:background="@drawable/gradient">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/clickPlay"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/ic_music_note"
+            android:longClickable="true" />
+
+        <ImageButton
+            android:id="@+id/PlayGrille"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/play"
+            android:longClickable="true" />
+
+        <ImageButton
+            android:id="@+id/addpart"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/export"
+            android:longClickable="true" />
+
+        <ImageButton
+            android:id="@+id/Reset"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/trash"
+            android:longClickable="true" />
+
+        <ImageButton
+            android:id="@+id/resetAll"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:drawable/ic_delete"
+            android:longClickable="true" />
+
+        <ImageButton
+            android:id="@+id/exit"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@android:drawable/ic_menu_revert"
+            android:longClickable="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Spinner
+                android:id="@+id/instruChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_deep_teal_500"
+                android:gravity="top" />
+
+            <Spinner
+                android:id="@+id/octaveChoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/highlighted_text_material_light"
+                android:gravity="top"
+                android:textAlignment="gravity"
+                android:foregroundGravity="top" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/EditTempo"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/material_deep_teal_200"
+                android:hint="Tempo (40-500)"
+                android:textCursorDrawable="@color/bright_foreground_material_light"
+                android:textStyle="italic"
+                android:gravity="top" />
+            <SeekBar
+                android:id="@+id/SeekSurface"
+                android:background="@color/material_deep_teal_200"
+                android:thumbTint="@color/background_floating_material_dark"
+                android:maxHeight="8dp"
+                android:minHeight="8dp"
+                android:max="150"
+                android:progressDrawable="@color/dim_foreground_disabled_material_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="-111dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+
+
+                <SeekBar
+                    android:background="@color/material_deep_teal_200"
+                    android:layout_width="240dp"
+                    android:layout_height="wrap_content"
+                    android:thumbTint="@color/background_floating_material_dark"
+                    android:progressDrawable="@color/dim_foreground_disabled_material_dark"
+                    android:rotation="90"
+                    android:max="60"
+                    android:id="@+id/seeknote"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <com.example.a3520096.myapplication.TouchBoard
+                android:id="@+id/boardSurface"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="9"
+                android:layout_marginLeft="-62dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<!ELEMENT partition (instrument_part)+>
+<!ATTLIST partition tempo CDATA #REQUIRED>
+<!ELEMENT instrument_part (note)+>
+<!ATTLIST instrument_part name CDATA #REQUIRED>
+<!ATTLIST instrument_part octave CDATA #REQUIRED>
+<!ELEMENT note ()>
+<!ATTLIST note name CDATA #REQUIRED>
+<!ATTLIST note instant CDATA #REQUIRED>
+<!ATTLIST note duration CDATA #REQUIRED>
+

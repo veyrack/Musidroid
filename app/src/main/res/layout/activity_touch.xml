@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="start"
+    android:weightSum="1"
+    android:background="@drawable/gradient">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/clickPlay"
+                android:longClickable="true"
+                android:background="@drawable/ic_music_note"
+                android:layout_marginTop="6dp" />
+
+            <ImageButton
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:id="@+id/resetAll"
+                android:background="@android:drawable/ic_delete"
+                android:longClickable="true"
+                android:layout_marginTop="5dp" />
+
+            <ImageButton
+                android:id="@+id/exit"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:longClickable="true"
+                android:background="@android:drawable/ic_menu_revert"
+                android:layout_marginTop="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="56dp"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+            <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/addpart"
+                android:longClickable="true"
+                android:background="@drawable/export"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="5dp" />
+
+            <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:longClickable="true"
+                android:id="@+id/Reset"
+                android:background="@drawable/trash"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal" />
+
+            <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/PlayGrille"
+                android:longClickable="true"
+                android:background="@drawable/play"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="15dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Spinner
+                android:id="@+id/instruChoice"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/material_deep_teal_500"
+                android:spinnerMode="dialog" />
+
+            <Spinner
+                android:id="@+id/octaveChoice"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/highlighted_text_material_light" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="20">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/EditTempo"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/material_deep_teal_200"
+                        android:hint="Tempo (40-500)"
+                        android:textCursorDrawable="@color/bright_foreground_material_light"
+                        android:textStyle="italic"
+                        android:textColor="#ff5e5e5e" />
+
+                    <SeekBar
+                        android:id="@+id/SeekSurface"
+                        android:background="@color/material_deep_teal_200"
+                        android:thumbTint="@color/background_floating_material_dark"
+                        android:maxHeight="12dp"
+                        android:minHeight="12dp"
+                        android:max="300"
+                        android:progressDrawable="@color/dim_foreground_disabled_material_dark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <ImageButton
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/bulb"
+                    android:background="@drawable/bulb"
+                    android:onClick="onClickBulb"
+                    android:layout_marginLeft="5dp" />
+
+                <ImageButton
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/Save"
+                    android:background="@drawable/save"
+                    android:layout_marginLeft="10dp" />
+
+                <ImageButton
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/Restore"
+                    android:background="@drawable/file"
+                    android:onClick="onClickRestore"
+                    android:layout_marginLeft="10dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.a3520096.myapplication.TouchBoard
+            android:id="@+id/boardSurface"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>
